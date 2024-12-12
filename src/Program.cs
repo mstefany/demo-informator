@@ -19,4 +19,4 @@ app.MapGet("/info", () => new
     CurrentTime = DateTime.UtcNow.ToString("o")
 });
 
-app.Run();
+app.Run("http://*:8080");

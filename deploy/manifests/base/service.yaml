@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-informator
+  labels:
+    app: demo-informator
+spec:
+  selector:
+    app: demo-informator
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080

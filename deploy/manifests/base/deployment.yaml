@@ -1,0 +1,26 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-informator
+  labels:
+    app: demo-informator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-informator
+  template:
+    metadata:
+      labels:
+        app: demo-informator
+    spec:
+      containers:
+      - name: demo-informator
+        image: quay.io/m11y/demo-informator:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_URLS
+          value: "http://*:8080"
+
