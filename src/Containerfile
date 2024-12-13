@@ -8,5 +8,5 @@ RUN dotnet publish -c Release -o out
 
 FROM ubi8/dotnet-90-runtime:9.0-2
 WORKDIR /opt/app-root/app
-COPY --from=build-env WORKDIR /opt/app-root/app/out ./
+COPY --from=build-env /opt/app-root/app/out ./
 ENTRYPOINT ["dotnet", "demo-informator.dll"]
