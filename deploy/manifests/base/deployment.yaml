@@ -19,6 +19,7 @@ spec:
       containers:
         - name: demo-informator
           image: image-registry.openshift-image-registry.svc:5000/stefany/demo-informator:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
