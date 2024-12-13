@@ -24,7 +24,7 @@ spec:
             - containerPort: 8080
           env:
             - name: LISTEN_PORT
-              value: 8080
+              value: "8080"
             - name: ASPNETCORE_URLS
               value: "http://*:8080"
             - name: MY_NODE_NAME
